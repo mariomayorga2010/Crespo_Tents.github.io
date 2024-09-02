@@ -1,0 +1,165 @@
+/* ----------------------------------------------------------------
+	Canvas: Saas
+-----------------------------------------------------------------*/
+
+:root,
+.not-dark {
+	--cnvs-themecolor: #0b44a7;
+	--cnvs-themecolor-rgb: 0, 70, 192;
+	--cnvs-secondary-color: #ffbd00;
+	--cnvs-body-font: 'hoss-round', sans-serif;
+}
+
+#header {
+	--cnvs-primary-menu-hover-color: var(--cnvs-secondary-color);
+}
+
+
+.bg-secondary-color,
+.h-bg-secondary-color:hover {
+	background-color: var(--cnvs-secondary-color) !important;
+}
+
+.secondary-color,
+.h-secondary-color:hover {
+	color: var(--cnvs-secondary-color) !important;
+}
+
+* {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+.promo-card {
+	--promo-card-gap: 15px;
+	transform: translateX(calc(var(--promo-card-gap) * 2)) translateY(calc(var(--promo-card-gap) * -2));
+	width: calc(100% - calc(var(--promo-card-gap) * 2));
+}
+
+.promo-card div:nth-child(1) {
+	position: relative;
+	padding: 60px 90px;
+	z-index: 3;
+}
+
+.promo-card>div:nth-child(2),
+.promo-card>div:nth-child(3) {
+	position: absolute;
+	top: var(--promo-card-gap);;
+	left: calc(-1 * var(--promo-card-gap));
+	width: 100%;
+	height: 100%;
+	background-color: #bccce7;
+	z-index: 1;
+}
+
+.promo-card>div:nth-child(3) {
+	top: calc(2 * var(--promo-card-gap));
+	left: calc(-2 * var(--promo-card-gap));
+	background-color: #e6ecf7;
+	z-index: 0;
+}
+
+.btn-link:hover {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+
+/* tabs */
+.saas-tab.nav-pills .nav-link {
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+
+.saas-tab.nav-pills .nav-link.active {
+	background-color: rgba(var(--cnvs-themecolor-rgb), .05);
+	margin-bottom: 20px;
+	padding: 25px;
+}
+
+.saas-tab.nav-pills .nav-link p {
+	display: none;
+	visibility: hidden;
+	margin-bottom: 0;
+	color: #333;
+}
+
+.saas-tab.nav-pills .nav-link.active p {
+	display: block;
+	visibility: visible;
+}
+
+.pricing-title {
+	transform: translateY(-50%);
+	margin: 0 auto;
+	display: inline-block;
+	width: auto;
+	padding: 0 16px;
+}
+
+.btn-action {
+	transform: translateY(50%);
+}
+
+
+.promo-card-fixed {
+	position: fixed;
+	bottom: 10px;
+	top: auto;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.promo-card-fixed .alert {
+	box-shadow: 0 20px 32px -8px rgb(3 10 28 / 20%);
+	background-image: url(images/promo.svg),
+		url(images/promo-bg.svg);
+	background-size: auto 94%,
+	cover;
+	background-repeat: no-repeat, no-repeat;
+	background-position: 30px center,
+		center center;
+	padding: 18px 24px;
+}
+
+@media (max-width: 767.98px) {
+	.saas-tab.nav-pills .nav-link p {
+		display: block;
+		visibility: visible;
+	}
+
+	.saas-tab.nav-pills .nav-link,
+	.saas-tab.nav-pills .nav-link.active {
+		padding: 20px;
+		margin-bottom: 8px;
+	}
+}
+
+@media (min-width: 992px) {
+
+	#header {
+		--cnvs-primary-menu-color: var(--cnvs-contrast-900);
+	}
+
+	.menu-item-more > .menu-link > div i:nth-child(1) {
+		display: inline-block;
+		background-color: rgba(255,255,255,0.15);
+		width: 32px;
+		height: 32px;
+		line-height: 32px;
+		border-radius: 50%;
+		text-align: center;
+	}
+
+	.sub-menu-container {
+		border-radius: 10px;
+		border:	0;
+	}
+
+	.rotated-text {
+		transform: rotate(-15deg);
+	}
+}
+

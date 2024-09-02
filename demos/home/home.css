@@ -1,0 +1,128 @@
+/* ----------------------------------------------------------------
+	Canvas: Home
+-----------------------------------------------------------------*/
+
+:root {
+	--cnvs-themecolor: #4B5333;
+	--cnvs-themecolor-rgb: 75, 83, 51;
+
+	--cnvs-body-font: neue-haas-grotesk-display, sans-serif;
+	--cnvs-primary-font: new-kansas, sans-serif;
+
+	--cnvs-body-bg: #FEFAF2;
+}
+
+#header {
+	--cnvs-primary-menu-font-weight: 500;
+	--cnvs-primary-menu-tt:	none;
+	--cnvs-primary-menu-ls:	0;
+	--cnvs-primary-menu-font-size: 1.15rem;
+	--cnvs-primary-menu-color: var(--cnvs-contrast-800);
+}
+
+.is-expanded-menu .menu-link {
+	--cnvs-primary-menu-padding-x: 20px;
+}
+
+.hero-image-one {
+	--cnvs-hero-img-w: 170px;
+	--cnvs-hero-img-h: 64px;
+	--cnvs-hero-img: url('images/hero-title.jpg');
+	position: relative;
+	display: inline-flex;
+    justify-content: center;
+    align-items: center;
+	width: var(--cnvs-hero-img-w);
+    height: var(--cnvs-hero-img-h);
+    background-image: var(--cnvs-hero-img);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+}
+
+.hero-image-one.size-sm {
+	--cnvs-hero-img-w: 120px;
+	--cnvs-hero-img: url('images/hero-title-2.jpg');
+}
+
+.hero-image-one.square {
+	--cnvs-hero-img: url('images/hero-title-3.jpg');
+}
+
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+	from {
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+  @keyframes rotating {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+.rotating {
+	-webkit-animation: rotating 20s linear infinite;
+	-moz-animation: rotating 20s linear infinite;
+	-ms-animation: rotating 20s linear infinite;
+	-o-animation: rotating 20s linear infinite;
+	animation: rotating 20s linear infinite;
+}
+
+.circular-text {
+	display: inline-flex;
+	width: 180px;
+    height: 180px;
+	border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.fbox-md {
+	--cnvs-featured-box-padding-x: 0;
+    --cnvs-featured-box-icon: 3.5rem;
+    --cnvs-featured-box-icon-size: 1.25rem;
+}
+
+.fbox-md .fbox-icon {
+    width: var(--cnvs-featured-box-icon);
+    height: var(--cnvs-featured-box-icon);
+}
+
+.contact-arrow {
+	display: none;
+}
+
+.device-up-md .contact-arrow {
+	display: block;
+	position: absolute;
+    width: 130px;
+    top: 90px;
+    right: -130px;
+    rotate: 80deg;
+    opacity: .1;
+}
+
+.section-contact .fbox-icon {
+    --cnvs-featured-box-icon: 2.5rem;
+    --cnvs-featured-box-icon-size: 1rem;
+}

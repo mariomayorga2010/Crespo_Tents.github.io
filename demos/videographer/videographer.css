@@ -1,0 +1,142 @@
+/* ----------------------------------------------------------------
+	Canvas: Videographer
+-----------------------------------------------------------------*/
+
+:root, .not-dark {
+	--cnvs-themecolor: #e69c48;
+	--cnvs-themecolor-rgb: 230, 156, 72;
+	--cnvs-dark-color: #000;
+
+	--cnvs-body-font: "area-normal", sans-serif;
+	--cnvs-primary-font: 'arsenica-variable', sans-serif;
+	--cnvs-secondary-font: "afronaut", sans-serif;
+
+	--cnvs-slider-arrows-bg-color: transparent;
+	--cnvs-slider-arrows-bg-hover-color: transparent;
+
+	--cnvs-frame-offset: 20px;
+	--cnvs-frame-bg: var(--cnvs-contrast-200);
+	--cnvs-slider-gradient-bg: var(--cnvs-contrast-rgb);
+	font-variation-settings: "opsz" 100, "wght" 400;
+
+	--cnvs-header-bg: transparent;
+}
+
+body.dark,
+.dark {
+	--cnvs-body-bg: var(--cnvs-dark-color);
+	/* --cnvs-header-bg: var(--cnvs-body-bg); */
+	--cnvs-frame-bg: var(--cnvs-contrast-200);
+	--cnvs-header-sticky-bg: transparent;
+}
+
+.dark .not-dark .menu-link {
+	--cnvs-primary-menu-color: #fff;
+}
+
+.swiper-slide .button:not(:hover) {
+	border-color: rgba(var(--cnvs-contrast-rgb),.25) !important;
+}
+
+/* Dark Mode Switch */
+.body-scheme-toggle {
+	position: fixed;
+	top: auto;
+	right: calc(var(--cnvs-frame-offset) + 15px);
+	bottom: calc(var(--cnvs-frame-offset) + 15px);
+	text-align: center;
+	margin: 0 auto;
+	z-index: 299;
+}
+
+.swiper-kenburn-effect .swiper-slide .swiper-slide-bg {
+	transition: 10s ease-out;
+	transform: scale(1);
+}
+
+.swiper-kenburn-effect .swiper-slide.swiper-slide-active .swiper-slide-bg {
+	transform: scale(1.1);
+}
+
+#header {
+	--cnvs-primary-menu-font-size: 1.25rem;
+	--cnvs-primary-menu-font: var(--cnvs-primary-font);
+	--cnvs-primary-menu-font-weight: 400;
+	--cnvs-primary-menu-ls: 0px;
+	--cnvs-primary-menu-tt: none;
+}
+
+.is-expanded-menu #header + .include-header {
+	margin-top: -181px;
+}
+
+/* Image Hover */
+.img-hover-block {
+	z-index: 0;
+}
+
+.img-hover-block span {
+	position: relative;
+	color: var(--cnvs-contrast-1000);
+}
+
+.img-hover-block small {
+	position: absolute;
+	font-size: 26%;
+	font-weight: normal;
+	top: 5px;
+	right: 5px;
+	color: var(--cnvs-themecolor);
+}
+
+.img-hover-block:hover span {
+	mix-blend-mode: difference;
+	z-index: 2;
+}
+
+body:not(.dark) .img-hover-block:hover span {
+	color: var(--cnvs-contrast-0);
+}
+
+.hover-reveal {
+	position: fixed;
+	width: 220px;
+	height: 280px;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	opacity: 0;
+	z-index: 1;
+}
+
+.hover-reveal__inner,
+.hover-reveal__img {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.hover-reveal__inner {
+	overflow: hidden;
+}
+
+.hover-reveal__img {
+	background-size: cover;
+	background-position: 50% 50%;
+	border-radius: 4px;
+}
+
+.portfolio-desc h3 {
+	font-size: 1.5rem;
+}
+
+.grid-filter li a {
+	font-family: monospace;
+	font-weight: normal !important;
+	--cnvs-grid-filter-item-font-size: 1rem;
+}
+
+.grid-filter li:not(.activeFilter):not(:hover) a {
+	color: var(--cnvs-contrast-400);
+}
+

@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Nib Pro';
+    src: url('NibPro-Light.eot');
+    src: local('Nib Pro Light'), local('NibPro-Light'),
+        url('NibPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('NibPro-Light.woff2') format('woff2'),
+        url('NibPro-Light.woff') format('woff'),
+        url('NibPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nib Pro';
+    src: url('NibPro-Italic.eot');
+    src: local('Nib Pro Italic'), local('NibPro-Italic'),
+        url('NibPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('NibPro-Italic.woff2') format('woff2'),
+        url('NibPro-Italic.woff') format('woff'),
+        url('NibPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nib Pro';
+    src: url('NibPro-SemiBold.eot');
+    src: local('Nib Pro SemiBold'), local('NibPro-SemiBold'),
+        url('NibPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('NibPro-SemiBold.woff2') format('woff2'),
+        url('NibPro-SemiBold.woff') format('woff'),
+        url('NibPro-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nib Pro';
+    src: url('NibPro-Bold.eot');
+    src: local('Nib Pro Bold'), local('NibPro-Bold'),
+        url('NibPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('NibPro-Bold.woff2') format('woff2'),
+        url('NibPro-Bold.woff') format('woff'),
+        url('NibPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nib Pro';
+    src: url('NibPro-BlackItalic.eot');
+    src: local('Nib Pro Black Italic'), local('NibPro-BlackItalic'),
+        url('NibPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('NibPro-BlackItalic.woff2') format('woff2'),
+        url('NibPro-BlackItalic.woff') format('woff'),
+        url('NibPro-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nib Pro';
+    src: url('NibPro-BoldItalic.eot');
+    src: local('Nib Pro Bold Italic'), local('NibPro-BoldItalic'),
+        url('NibPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('NibPro-BoldItalic.woff2') format('woff2'),
+        url('NibPro-BoldItalic.woff') format('woff'),
+        url('NibPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nib Pro';
+    src: url('NibPro-LightItalic.eot');
+    src: local('Nib Pro Light Italic'), local('NibPro-LightItalic'),
+        url('NibPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('NibPro-LightItalic.woff2') format('woff2'),
+        url('NibPro-LightItalic.woff') format('woff'),
+        url('NibPro-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nib Pro';
+    src: url('NibPro-Black.eot');
+    src: local('Nib Pro Black'), local('NibPro-Black'),
+        url('NibPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('NibPro-Black.woff2') format('woff2'),
+        url('NibPro-Black.woff') format('woff'),
+        url('NibPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nib Pro';
+    src: url('NibPro-SemiBoldItalic.eot');
+    src: local('Nib Pro SemiBold Italic'), local('NibPro-SemiBoldItalic'),
+        url('NibPro-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('NibPro-SemiBoldItalic.woff2') format('woff2'),
+        url('NibPro-SemiBoldItalic.woff') format('woff'),
+        url('NibPro-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nib Pro';
+    src: url('NibPro-Regular.eot');
+    src: local('Nib Pro Regular'), local('NibPro-Regular'),
+        url('NibPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('NibPro-Regular.woff2') format('woff2'),
+        url('NibPro-Regular.woff') format('woff'),
+        url('NibPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

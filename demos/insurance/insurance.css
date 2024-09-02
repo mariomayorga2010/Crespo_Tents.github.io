@@ -1,0 +1,132 @@
+/* ----------------------------------------------------------------
+	Canvas: Insurance
+-----------------------------------------------------------------*/
+
+:root {
+	--cnvs-themecolor: #FF6049;
+	--cnvs-themecolor-rgb: 255, 96, 73;
+	--cnvs-secondary-color: #FDE3A1;
+
+	--cnvs-body-font: 'Roboto', sans-serif;
+	--cnvs-primary-font: 'Quattrocento', serif;
+	--cnvs-secondary-font: 'Shadows Into Light', cursive;
+}
+
+#header {
+	--cnvs-primary-menu-font:     		var(--cnvs-body-font);
+}
+
+.color-2 {
+	color: var(--cnvs-secondary-color) !important;
+}
+
+.bgcolor-2 {
+	background-color: var(--cnvs-secondary-color) !important;
+}
+
+.feature-box {
+	--cnvs-featured-box-font-weight: 600;
+}
+
+/* .button-reveal */
+.button.button-reveal i {
+	opacity: 0;
+	left: auto !important;
+	right: 20px !important;
+	background-color: transparent;
+	transition: all .3s ease !important;
+}
+
+.button.text-end.button-reveal i {
+	left: 20px !important;
+	right: auto !important;
+}
+
+.button:not(.text-end).button-reveal i {
+	left: auto !important;
+	right: 20px !important;
+}
+
+.button:hover.button-reveal i {
+	opacity: 1;
+	right: 0 !important;
+	transform: translateX(-10px);
+}
+
+.button-xlarge:hover.button-reveal i {
+	transform: translateX(-22px);
+}
+
+.button.button-reveal:not(.text-end):hover span { left: -13% !important; }
+
+.button i {
+	position: relative;
+	top: 1px;
+}
+
+/* ----------------------------------------------------------------------------
+	Services Grid
+---------------------------------------------------------------------------- */
+
+.grid-border {
+	--cnvs-grid-border-opacity: 0;
+}
+
+.grid-border .fbox-content h3 {
+	font-size: 1.375rem;
+}
+
+.dark .grid-border [class^=col-]:before,
+.dark .grid-border [class^=col-]:after { border-color: rgba(255,255,255,0.05); }
+
+.ins-categories .nav-link {
+	padding: 20px 30px;
+	color: #444;
+	background-color: var(--bs-light);
+	margin-top: 17px;
+	font-size: 1.2em;
+	border-radius: .25rem;
+    transition: max-height .5s;
+    max-height: 70px;
+    overflow: hidden;
+}
+
+.ins-categories .nav-link:first-child {
+	margin-top: 0;
+}
+
+.ins-categories .nav-link:hover {
+	background-color: #F5F5F5;
+}
+
+.ins-categories .nav-link.active {
+	color: #000;
+	background-color: #E3EAF1;
+	max-height: 200px;
+}
+
+.ins-categories .nav-link .tab-header img {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 15px;
+	opacity: .5;
+}
+
+.ins-categories .nav-link .tab-desc {
+    opacity: 0;
+    transition: opacity .3s;
+    color: #5B5855;
+    font-size: 1.025rem;
+    padding-left: 45px;
+}
+
+.ins-categories .nav-link.active .tab-desc {
+	opacity: 1;
+    transition: opacity .5s;
+    transition-delay: .25s;
+}
+
+.widget {
+	--cnvs-widget-title-font-weight: 600;
+}

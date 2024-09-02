@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="153.033" height="98.948" viewBox="0 0 153.033 98.948">
+  <g id="Group_185" data-name="Group 185" transform="translate(-171.285 -176.981)">
+    <text id="PLAYGAME" transform="translate(171.285 257.621)" fill="#fff" font-size="26.299" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">PLAY</tspan><tspan y="0" font-family="Montserrat-Black, Montserrat" font-weight="800">GAME</tspan></text>
+    <path id="Path_3806" data-name="Path 3806" d="M269.492,192.174l-8.2-8.2-13.762,13.762L233.77,183.974l-8.2,8.2,13.762,13.762L225.57,219.7l8.2,8.2,13.762-13.762L261.294,227.9l8.2-8.2-13.762-13.762Z" fill="#fff"/>
+    <g id="Group_182" data-name="Group 182">
+      <path id="Path_3807" data-name="Path 3807" d="M324.318,226.13H269.362l27.478-41.068Zm-33.246-11.6h11.536l-5.768-8.62Z" fill="#fff"/>
+    </g>
+    <g id="Group_184" data-name="Group 184">
+      <g id="Group_183" data-name="Group 183">
+        <path id="Path_3808" data-name="Path 3808" d="M197.434,228.924a23.211,23.211,0,1,1,23.21-23.211A23.237,23.237,0,0,1,197.434,228.924Zm0-34.826a11.615,11.615,0,1,0,11.615,11.615A11.628,11.628,0,0,0,197.434,194.1Z" fill="#fff"/>
+      </g>
+      <rect id="Rectangle_31" data-name="Rectangle 31" width="11.835" height="27.155" transform="translate(191.516 176.981)" fill="#fff"/>
+    </g>
+    <text id="ARE_YOU_READY_" data-name="ARE YOU READY?" transform="translate(249.714 272.929)" fill="#fff" font-size="11.325" font-family="Montserrat-SemiBold, Montserrat" font-weight="600" letter-spacing="0.32em"><tspan x="-73.905" y="0">ARE YOU READY?</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,224 @@
+/* ----------------------------------------------------------------
+	Canvas: Doctors
+-----------------------------------------------------------------*/
+
+
+:root,.not-dark {
+	--cnvs-themecolor: #0A3C3F;
+	--cnvs-themecolor-rgb: 10, 60, 63;
+
+
+	--cnvs-themecolor-2: #A9E8E0;
+	--cnvs-themecolor-2-rgb: 169, 232, 224;
+
+	--cnvs-color-yellow: #FEC160;
+
+	--cnvs-primary-font: 'DM Sans', Sans-Serif;
+	--cnvs-body-font: 'Rubik', sans-serif;
+
+	--cnvs-section-bg: #f9f6e9;
+}
+
+@media (min-width: 992px) {
+	.is-expanded-menu #header.transparent-header.floating-header .container {
+		max-width: calc(960px - 24px);
+	}
+}
+
+@media (min-width: 1200px) {
+	.is-expanded-menu #header.transparent-header.floating-header .container {
+		max-width: calc(1140px - 24px);
+	}
+}
+
+@media (min-width: 1400px) {
+	.is-expanded-menu #header.transparent-header.floating-header .container {
+		max-width: calc(1320px - 24px);
+	}
+}
+
+.dark {
+	--cnvs-header-sticky-bg: transparent;
+	--cnvs-header-floating-bg: var(--cnvs-themecolor);
+}
+
+.slider-element {
+	margin-top: -1px;
+}
+
+.bg-color-2,
+.h-bg-color-2:hover {
+	background-color: rgba(var(--cnvs-themecolor-2-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.bg-color-2[class*=bg-opacity-],
+.h-bg-color-2[class*=bg-opacity-]:hover {
+	background-color: rgba(var(--cnvs-themecolor-2-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.color-2,
+.h-color-2:hover {
+	color: rgba(var(--cnvs-themecolor-2-rgb), var(--bs-text-opacity, 1)) !important;
+}
+
+.color-yellow,
+.h-color-yellow:hover {
+	color: var(--cnvs-color-yellow) !important;
+}
+
+#header {
+	--cnvs-primary-menu-font-size: 1.125rem;
+	--cnvs-primary-menu-font-weight: 400;
+	--cnvs-primary-menu-tt: none;
+	--cnvs-primary-menu-ls: 0;
+	--cnvs-primary-menu-hover-color: var(--cnvs-themecolor-2);
+	--cnvs-header-floating-top-offset: 0px;
+}
+
+.hero-card {
+	position: absolute;
+	bottom: 10%;
+}
+
+@media (max-width: 991.98px) {
+	.hero-card {
+		position: relative;
+		transform: none !important;
+		margin-top: 20px;
+		width: max-content !important;
+	}
+}
+
+.bootstrap-select {
+	position: relative;
+    flex: 1 1 auto;
+    width: 1% !important;
+    min-width: 0;
+}
+
+.dropdown-menu {
+	width: max-content;
+	min-width: max-content;
+}
+
+.bootstrap-select .btn-light {
+	--bs-btn-active-bg: transparent;
+	--bs-btn-bg: transparent;
+	--bs-btn-hover-bg: transparent;
+	--bs-btn-border-width: 0;
+	--bs-btn-focus-box-shadow: none;
+}
+
+.bootstrap-select .dropdown-toggle:focus {
+	outline: 0 !important;
+}
+
+.bootstrap-select .dropdown-item:hover,
+.bootstrap-select .dropdown-item:focus,
+.bootstrap-select .dropdown-item.selected {
+	background-color: var(--cnvs-section-bg);
+	color: #111;
+}
+
+.hand-mobile-img {
+	--cnvs-hand-mobile-img-size: 180px;
+	--cnvs-hand-mobile-img-right: 0px;
+    position: absolute;
+	width: var(--cnvs-hand-mobile-img-size);
+    height: var(--cnvs-hand-mobile-img-size);
+    top: calc(-1 * var(--cnvs-hand-mobile-img-size));
+    right: var(--cnvs-hand-mobile-img-right);
+    z-index: -1;
+	object-fit: contain;
+}
+
+@media (min-width: 992px) {
+	.hand-mobile-img {
+		--cnvs-hand-mobile-img-size: 280px;
+		--cnvs-hand-mobile-img-right: 100px;
+	}
+}
+
+.slider-gradient-bg {
+	background-image: linear-gradient(90deg, #26434d29, #FDFAEF);
+}
+
+.services-categories {
+	counter-reset: services-category-item-number;
+}
+
+.services-categories .services-category-item {
+	position: relative;
+}
+
+.services-categories .services-category-item::before {
+	position: absolute;
+    z-index: 1;
+    top: 5px;
+    left: var(--bs-gutter-x);
+	font-size: 80%;
+	font-family: monospace;
+	font-weight: bold;
+    counter-increment: services-category-item-number;
+    content: counter(services-category-item-number, decimal-leading-zero)".";
+}
+
+
+.services-categories .services-category-item a:hover {
+	background-color: var(--cnvs-themecolor);
+	color: rgba(255,255,255,0.6);
+}
+
+.services-categories .services-category-item a:hover h4 {
+	color: #FFF;
+}
+
+.services-categories .services-category-item:hover::before {
+	color: #FFF;
+}
+
+#categories-tab.nav-pills {
+	--bs-nav-pills-link-active-bg: var(--cnvs-themecolor);
+	gap: 10px;
+}
+
+#categories-tab .nav-link:not(.active) {
+	background-color: var(--cnvs-themecolor-2);
+}
+
+.underliner {
+    --cnvs-underliner-size: 50%;
+	--cnvs-underliner-color: var(--cnvs-themecolor-2-rgb);
+	--cnvs-underliner-opacity: 1;
+}
+
+.doctor-lists h4 {
+	font-size: 1.125rem;
+}
+
+.doctor-lists small {
+	font-size: 0.925rem;
+	opacity: 0.7;
+}
+
+.widget-img::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	background-color: var(--cnvs-themecolor);
+	border-radius: 12px;
+}
+
+.is-expanded-menu #header-wrap {
+    position: fixed !important;
+	top: 30px !important;
+	transition: all .3s ease;;
+}
+
+.is-expanded-menu .sticky-header #header-wrap {
+	top: 10px !important;
+}

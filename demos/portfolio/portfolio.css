@@ -1,0 +1,137 @@
+ /* ----------------------------------------------------------------
+	Canvas: Integro
+-----------------------------------------------------------------*/
+
+
+:root {
+	--cnvs-themecolor: #003638;
+	--cnvs-themecolor-rgb: 0, 54, 56;
+	--cnvs-primary-font: halyard-text, sans-serif;
+	--cnvs-secondary-font: quiche-sans, sans-serif;
+	--bs-bg-opacity: 1;
+}
+
+body.dark {
+	--cnvs-themecolor: #FFE036;
+	--cnvs-themecolor-rgb: 255, 224, 54;
+}
+
+* {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+body,
+#wrapper,
+#content,
+.page-transition-wrap {
+	background-color: #ece3da;
+}
+
+
+body.dark,
+.dark #wrapper,
+.dark #content,
+.dark .page-transition-wrap {
+	background-color: #000;
+}
+
+.dark #header,
+#header.dark,
+.dark #header-wrap {
+	background-color: #121212;
+	box-shadow: 7px 0 14px 3px #000000;
+}
+
+.is-expanded-menu.side-header .menu-item:not(:first-child) {
+	margin-top: 1rem;
+}
+
+.is-expanded-menu .menu-item .menu-link {
+	font-weight: normal;
+	font-size: 1.125rem;
+}
+
+.grid-filter li:nth-child(1).activeFilter {
+	display: none;
+	visibility: hidden;
+}
+
+.canvas-cursor {
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translate3d(0, 0, 0);
+	z-index: 999999;
+	transition: transform .05s ease;
+}
+
+.canvas-cursor-follower,
+.canvas-cursor-dot {
+	width: 1.25rem;
+	height: 1.25rem;
+	background: rgba(var(--cnvs-themecolor-rgb), 0.2);
+	border-radius: 50%;
+	transition: 0.25s ease;
+	transition-property: width, height, border, background;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+}
+
+.canvas-cursor-dot {
+	width: 0.25rem;
+	height: 0.25rem;
+	background-color: rgba(var(--cnvs-themecolor-rgb), 0.2);
+	border: 0;
+}
+
+.canvas-cursor-action .canvas-cursor-follower {
+	width: 3rem;
+	height: 3rem;
+	border-color: transparent;
+	background: rgba(var(--cnvs-themecolor-rgb), 0.3);
+}
+
+#demo-portfolio-filter a {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+#demo-portfolio-filter a img {
+	transition: transform .5s ease-out;
+	will-change: transform;
+	transform-origin: center center;
+}
+
+#demo-portfolio-filter a:hover img {
+	transform: scale(1.1);
+}
+
+.text-stretch {
+	position: relative;
+	width: calc(100% + 360px);
+	z-index: 1;
+}
+
+#theme-scheme-btn {
+	top: auto;
+	left: auto;
+	bottom: 30px;
+	right: 80px;
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	font-size: .875rem;
+	line-height: 36px;
+	text-align: center;
+	color: #FFF;
+	cursor: pointer;
+	z-index: 9;
+	transition: background-color .2s linear;
+}
+

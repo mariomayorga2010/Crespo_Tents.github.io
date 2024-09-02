@@ -1,0 +1,201 @@
+/* ----------------------------------------------------------------
+	Canvas: eBook
+-----------------------------------------------------------------*/
+
+
+:root,
+.not-dark {
+	--cnvs-themecolor: #979D85;
+	--cnvs-themecolor-rgb: 151,157,133;
+
+	--cnvs-primary-font: "adonis-web", sans-serif;
+	--cnvs-body-font: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+
+	--cnvs-section-bg: #f9f6e9;
+	--cnvs-side-header-bg: var(--cnvs-themecolor);
+}
+
+.dark {
+	--cnvs-side-header-bg: var(--cnvs-themecolor);
+}
+
+#header {
+	--cnvs-primary-menu-tt: none;
+	--cnvs-primary-menu-font-size: 1.25rem;
+	--cnvs-primary-menu-ls: 0;
+	--cnvs-primary-menu-font-weight: 400;
+	--cnvs-primary-menu-hover-color: #FFF;
+}
+
+.is-expanded-menu #header {
+	--cnvs-primary-menu-hover-color: #000;
+}
+
+
+#logo a {
+	font-size: 2.5rem;
+	line-height: 1;
+	color: var(--cnvs-contrast-1000);
+}
+
+.swiper_wrapper {
+	width: 320px;
+	height: 520px;
+}
+
+.swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 320px;
+	height: 520px;
+}
+
+.swiper-slide {
+	opacity: 0;
+}
+
+.swiper-slide.swiper-slide-visible.swiper-slide-active,
+.swiper-slide.swiper-slide-visible.swiper-slide-active ~ .swiper-slide {
+	opacity: 1;
+}
+
+.is-expanded-menu.side-header .content-wrap .container {
+    --cnvs-side-header-padding-gutters: 70px;
+}
+
+.is-expanded-menu .menu-container .menu-item .menu-link div {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.is-expanded-menu .menu-container.menu-hover-effect .menu-item .menu-link div::before {
+	content: "";
+	position: relative;
+	display: inline-block;
+	width: 0px;
+	height: 1px;
+	background-color: var(--cnvs-primary-menu-hover-color);
+	transition: width .2s ease;
+	margin-right: 10px;
+}
+
+.is-expanded-menu .menu-container.menu-hover-effect .menu-item:hover .menu-link div::before,
+.is-expanded-menu .menu-container.menu-hover-effect .menu-item.current .menu-link div::before {
+	width: 15px;
+}
+
+.is-expanded-menu .menu-container .menu-item:hover .menu-link,
+.is-expanded-menu .menu-container .menu-item.current .menu-link {
+	font-style: italic;
+}
+
+.border-grid {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: auto;
+}
+
+.border-grid > *:not(:last-child) {
+	border-right: 1px solid rgba(var(--cnvs-contrast-rgb), .05);
+}
+
+.book-features .fbox-icon {
+    --cnvs-featured-box-icon: 2.5rem;
+	--cnvs-featured-box-icon-size: 1.15rem;
+}
+
+#testimonial-carousel .card {
+	background-color: var(--cnvs-section-bg);
+	border: 0;
+}
+
+.underliner {
+	background-size: 0% 90%;
+}
+
+.underliner.is-in-viewport {
+	background-size: 100% 90%;
+}
+
+body:not(.is-expanded-menu) .col-padding {
+	padding: 2rem;
+}
+
+.owl-carousel:hover .owl-nav .owl-prev {
+	left: calc(1 * var(--cnvs-owl-nav-sizes));
+}
+
+.owl-carousel:hover .owl-nav .owl-next {
+	right: calc(1 * var(--cnvs-owl-nav-sizes));
+}
+
+
+/* CSS Animation */
+
+
+@-webkit-keyframes fadeInLeftSmall {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-50px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+		transform: translate3d(-50px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+		transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+	}
+}
+@keyframes fadeInLeftSmall {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-50px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+		transform: translate3d(-50px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+		transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+	}
+}
+.fadeInLeftSmall {
+	-webkit-animation-name: fadeInLeftSmall;
+	animation-name: fadeInLeftSmall;
+}
+
+@-webkit-keyframes fadeInRightSmall {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(50px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+		transform: translate3d(50px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+		transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+	}
+}
+@keyframes fadeInRightSmall {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(50px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+		transform: translate3d(50px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+		transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+	}
+}
+.fadeInRightSmall {
+	-webkit-animation-name: fadeInRightSmall;
+	animation-name: fadeInRightSmall;
+}

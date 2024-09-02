@@ -1,0 +1,170 @@
+ /* ----------------------------------------------------------------
+	Canvas: Integro
+-----------------------------------------------------------------*/
+
+@import url("css/fonts/font_stylesheet.css"); /* Using a Font url */
+
+
+:root {
+	--cnvs-themecolor: #FFE036;
+	--cnvs-themecolor-rgb: 255, 224, 54;
+	--cnvs-secondary-color: #040d1d;
+	--cnvs-primary-font: 'Manrope', sans-serif;
+	--cnvs-secondary-font: 'PT Serif', serif;
+}
+
+.dark,
+body.dark {
+	--cnvs-body-bg: var(--cnvs-secondary-color);
+	--cnvs-body-bg-boxed: var(--cnvs-secondary-color);
+	--cnvs-footer-bg: var(--cnvs-secondary-color);
+
+	--cnvs-header-sticky-bg: var(--cnvs-body-bg);
+}
+
+#header,
+.not-dark {
+	--cnvs-header-bg: var(--cnvs-secondary-color);
+	--cnvs-primary-menu-submenu-bg: var(--cnvs-themecolor);
+	--cnvs-primary-menu-submenu-font-color: var(--cnvs-secondary-color);
+	--cnvs-primary-menu-submenu-hover-color: var(--bs-gray-900);
+}
+
+* {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+.offcanvas {
+	opacity: 0;
+	transform: translateX(50%);
+	transition: transform 0.3s ease-in-out,
+					opacity 0.3s ease-in-out;
+	will-change: transform;
+}
+
+.offcanvas.show {
+	opacity: 1;
+}
+
+.offcanvas-backdrop.show {
+	opacity: .7;
+}
+
+.fbox-icon i,
+.bg-white-soft {
+	background-color: rgba(255, 255, 255, 0.07);
+}
+
+.owl-carousel.full-width-view .owl-stage {
+	padding-left: 0 !important;
+}
+
+.owl-carousel.full-width-view .owl-stage-outer {
+	overflow: visible;
+}
+
+.owl-carousel {
+	--cnvs-owl-nav-sizes: 46px;
+	--cnvs-owl-nav-background: rgba(0,0,0,0.5);
+	--cnvs-owl-nav-bg: var(--cnvs-themecolor);
+}
+
+.dark .owl-carousel .owl-nav [class*=owl-] span {
+	border-color: rgba(255,255,255,0.15);
+	color: #CCC;
+	line-height: 30px;
+}
+
+
+.stack-cards {
+  position: relative;
+  display: block;
+}
+
+.stack-cards-item {
+	background: #19202B;
+	border-radius: 0.25rem;
+	box-shadow: -5px 0 16px 8px rgba(0, 0, 0, 0.2);
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+/*
+If you use SASS you can shorten this one here like this:
+
+@for $i from 0 through 5 {
+  &:nth-of-type(#{$i}) {
+    transform: translate(calc((#{$i} - 1) * var(--cnvs-stack-card-offset)), calc((#{$i} - 1) * var(--cnvs-stack-card-offset)));
+  }
+}
+*/
+
+@media (min-width: 992px) {
+
+	.content-wrap {
+		overflow:visible;
+	}
+
+	.stack-cards {
+		position: relative;
+		display: block;
+	}
+
+	.sticky-title {
+		position: sticky;
+		top: 8rem;
+	}
+
+	.stack-cards > .stack-cards-item + .stack-cards-item {
+		margin-top: 40vh;
+	}
+
+	.stack-cards-item {
+		--cnvs-stack-card-offset: 1.5em;
+		max-width: 53rem;
+		position: sticky;
+		top: 20rem;
+		margin-bottom: 0px;
+	}
+
+	.stack-cards-item:nth-of-type(0) {
+		transform: translateY(calc((0 - 1) * var(--cnvs-stack-card-offset))) scale(0.85);
+	}
+	.stack-cards-item:nth-of-type(1) {
+		transform: translateY(calc((1 - 1) * var(--cnvs-stack-card-offset))) scale(0.88);
+	}
+	.stack-cards-item:nth-of-type(2) {
+		transform: translateY(calc((2 - 1) * var(--cnvs-stack-card-offset))) scale(0.91);
+	}
+	.stack-cards-item:nth-of-type(3) {
+		transform: translateY(calc((3 - 1) * var(--cnvs-stack-card-offset))) scale(0.94);
+	}
+	.stack-cards-item:nth-of-type(4) {
+		transform: translateY(calc((4 - 1) * var(--cnvs-stack-card-offset))) scale(0.97);
+	}
+	.stack-cards-item:nth-of-type(5) {
+		transform: translateY(calc((5 - 1) * var(--cnvs-stack-card-offset))) scale(1);
+	}
+}
+
+
+.promo h2 {
+    color: #FFF;
+    font-size: 34px;
+    line-height: 135%;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.offcanvas + #wrapper {
+	transition: transform .3s ease;
+}
+
+.offcanvas.show + #wrapper {
+	transform: scale(0.99);
+}
+
+.dark .primary-menu:not(.not-dark) .sub-menu-container .menu-item > .menu-link {
+	border-radius: 8px;
+}

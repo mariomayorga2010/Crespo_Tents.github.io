@@ -1,0 +1,242 @@
+ /* ----------------------------------------------------------------
+	Canvas: Project
+-----------------------------------------------------------------*/
+
+
+:root,
+.not-dark {
+	--cnvs-themecolor: #0037ff;
+	--cnvs-themecolor-rgb: 0, 55, 255;
+	--cnvs-primary-font: abril-display, serif;
+	--cnvs-body-font: tenon, sans-serif;
+
+	--cnvs-border-radius: 6px;
+
+	--cnvs-dark-0: #f5f5f5;
+	--cnvs-dark-100: #e1e1e7;
+
+	--cnvs-font-size-body: 1.25rem;
+
+}
+
+body.dark {
+	--cnvs-themecolor: #baff00;
+	--cnvs-themecolor-rgb: 186, 255, 0;
+
+	--cnvs-body-bg: var(--cnvs-dark-0);
+
+	--cnvs-dark-0: #0f0f0f;
+	--cnvs-dark-100: #1a1a1b;
+}
+
+* {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+#header {
+	--cnvs-header-height: 70px;
+	--cnvs-header-floating-bg: rgba(240, 240, 240, 0.85);
+	--cnvs-primary-menu-font: var(--cnvs-body-font);
+	--cnvs-primary-menu-font-weight: 500;
+	--cnvs-primary-menu-font-size: 1.125rem;
+	--cnvs-primary-menu-tt:	none;
+	--cnvs-primary-menu-ls:	0;
+	--cnvs-header-floating-top-offset: 0;
+	--cnvs-primary-menu-color: var(--cnvs-contrast-800);
+	--cnvs-primary-menu-active-color: var(--cnvs-contrast-1000);
+	--cnvs-primary-menu-hover-color: var(--cnvs-contrast-1000);
+	--cnvs-top-search-placeholder: var(--cnvs-contrast-500);
+	--cnvs-primary-menu-submenu-hover-bg: rgba(var(--cnvs-contrast-rgb),0.1);
+}
+
+.dark #header {
+	--cnvs-header-floating-bg: rgba(42, 42, 43, 0.85);
+	--cnvs-primary-menu-color: var(--cnvs-contrast-500);
+	--cnvs-primary-menu-active-color: var(--cnvs-contrast-1000);
+	--cnvs-primary-menu-hover-color: var(--cnvs-contrast-1000);
+	--cnvs-top-search-placeholder: var(--cnvs-contrast-300);
+}
+
+
+.is-expanded-menu #header-wrap,
+.is-expanded-menu .sticky-header #header-wrap {
+    position: fixed !important;
+    top: 15px;
+    background-color: transparent;
+    border: 0;
+}
+
+.is-expanded-menu #header.transparent-header.floating-header .container {
+	border-radius: var(--cnvs-border-radius);
+	max-width: calc(100% - 30px);
+	backdrop-filter: blur(.5rem);
+	-webkit-backdrop-filter: blur(.5rem);
+}
+
+.is-expanded-menu .style-3 .menu-container > .menu-item.current > .menu-link {
+	--cnvs-primary-menu-active-color: var(--cnvs-contrast-1000);
+    background-color: var(--cnvs-primary-menu-submenu-hover-bg);
+}
+
+.is-expanded-menu .style-3 .menu-container > .menu-item > .menu-link {
+	--cnvs-primary-menu-padding-x: 20px;
+	--cnvs-primary-menu-padding-y: 8px;
+	margin: 10px 2px;
+	border-radius: var(--cnvs-border-radius);
+}
+
+.card,
+.portfolio-image {
+	--bs-card-border-width: 0;
+	--bs-card-bg: var(--cnvs-dark-100);
+}
+
+.portfolio-item .portfolio-image, .portfolio-item .portfolio-image > a, .portfolio-item .portfolio-image img {
+	border-radius: var(--cnvs-border-radius);
+}
+
+.portfolio .bg-overlay-content {
+	text-align: center;
+}
+
+.is-expanded-menu .portfolio .bg-overlay-content::before {
+	--cnvs-blur-offset: 100px;
+	content: "";
+	position: absolute;
+	width: calc(100% - var(--cnvs-blur-offset));
+	height: calc(100% - var(--cnvs-blur-offset));
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: var(--cnvs-border-radius) !important;
+	transition-property: width,height;
+	transition-duration: .3s;
+	transition-timing-function: ease;
+	transform-origin: center center;
+
+}
+
+.portfolio .bg-overlay:not(.no-hover-blur):hover .bg-overlay-content::before {
+	--cnvs-blur-offset: 50px;
+	background-color: rgba(248, 248, 250, 0.1);
+	backdrop-filter: blur(1.5rem);
+	-webkit-backdrop-filter: blur(1.5rem);
+}
+
+.is-expanded-menu .bg-overlay .portfolio-desc {
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+.bg-overlay .portfolio-desc h3 {
+	font-size: 1.85rem;
+	margin-bottom: 0;
+	transition: transform .3s ease;
+	font-style: italic;
+}
+
+.bg-overlay:hover .portfolio-desc h3 {
+	transform: translateY(-7px);
+}
+
+.portfolio .bg-overlay-content p {
+	transform: translateY(20px);
+	opacity: 0;
+	height: 0;
+	margin-bottom: 0;
+	transition: all .3s ease;
+	font-size: 1.25rem;
+	line-height: 1.4;
+}
+
+.portfolio .bg-overlay:hover p {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(10px);
+}
+
+/* .flex-prev,
+.flex-next {
+	--cnvs-slider-arrows-size: 40px;
+	top: auto;
+	bottom: 20px;
+	transform: none;
+	border-radius: 50%;
+	--cnvs-slider-arrows-bg-hover-color: rgba(255,255,255,1);
+	--cnvs-slider-arrows-bg-color: rgba(255,255,255,0.2);
+	--cnvs-slider-arrow-color: #000;
+	backdrop-filter: blur(.5rem);
+	-webkit-backdrop-filter: blur(.5rem);
+}
+
+.flex-prev {
+	left: calc(50% - 24px);
+	right: auto;
+}
+
+.flex-next {
+	left: calc(50% + 24px);
+	right: auto;
+} */
+
+
+.flex-direction-nav {
+	position: absolute;
+	top: auto;
+	bottom: 20px;
+	left: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateX(-50%);
+	column-gap: 10px;
+	z-index: 9;
+}
+
+.flex-prev,
+.flex-next {
+	--cnvs-slider-arrows-size: 40px;
+	position: relative;
+	display: block;
+	top: auto !important;
+	bottom: auto !important;
+	left: auto !important;
+	right: auto !important;
+	transform: none !important;
+	border-radius: 50%;
+	--cnvs-slider-arrows-bg-hover-color: rgba(255,255,255,1);
+	--cnvs-slider-arrows-bg-color: rgba(255,255,255,0.25);
+	--cnvs-slider-arrow-color: #000;
+	backdrop-filter: blur(.75rem);
+	-webkit-backdrop-filter: blur(.75rem);
+}
+
+.twitter-timeline {
+	height: 100%;
+}
+
+.form-control {
+	--cnvs-input-btn-input-bg : var(--cnvs-dark-100);
+	--cnvs-form-control-radius : var(--cnvs-border-radius);
+
+	--cnvs-input-btn-border-width: 0;
+}
+
+
+.text-fill-effect,
+.gradient-text {
+  text-shadow: none !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.text-fill-effect {
+	--cnvs-text-fill-placeholder: rgba(var(--cnvs-contrast-rgb), 0.1);
+	--cnvs-text-fill-color: linear-gradient(to right, var(--cnvs-contrast-1000), var(--cnvs-contrast-1000));
+	-webkit-text-fill-color: var(--cnvs-text-fill-placeholder);
+	background-image: var(--cnvs-text-fill-color);
+	background-size: calc(var(--cnvs-scroll-start) * 100%) 100%;
+}

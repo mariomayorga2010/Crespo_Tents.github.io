@@ -1,0 +1,91 @@
+/* ----------------------------------------------------------------
+	Canvas: Football Club
+-----------------------------------------------------------------*/
+
+:root {
+	--cnvs-themecolor: #b03333;
+	--cnvs-themecolor-rgb: 176, 51, 51;
+
+	--cnvs-body-font: "Roboto", sans-serif;
+	--cnvs-primary-font: 'Oswald', sans-serif;
+
+	--cnvs-btn-skew: 15deg;
+
+	--cnvs-section-bg: #cdcdcd;
+
+	--cnvs-section-margin: 5.5rem;
+}
+
+.dark {
+	--cnvs-footer-bg: var(--cnvs-themecolor);
+}
+
+
+.button {
+	font-family: var(--cnvs-primary-font);
+}
+
+.fw-800 {
+	font-weight: 800;
+}
+
+#header {
+	--cnvs-primary-menu-hover-color: rgba(255,255,255,1);
+	--cnvs-primary-menu-submenu-hover-bg: rgba(var(--cnvs-contrast-rgb), 0.15);
+	--cnvs-primary-menu-font-weight: 500;
+	--cnvs-primary-menu-font: var(--cnvs-body-font);
+}
+
+.is-expanded-menu .style-3 .menu-container > .menu-item > .menu-link {
+	margin: 20px 0;
+	border-radius: 0;;
+}
+
+.is-expanded-menu .menu-container > .menu-item:not(:first-child) {
+	margin-left: 5px;
+}
+
+.countdown {
+	--cnvs-countdown-size: 4.25rem;
+    --cnvs-countdown-section: 16px;
+    --cnvs-countdown-border: 0;
+}
+
+.countdown-amount {
+	font-weight: 800;
+	font-family: var(--cnvs-primary-font);
+	color: var(--cnvs-contrast-1000);
+	margin-bottom: 10px;
+}
+
+.countdown-section {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-family: var(--cnvs-primary-font);
+	font-size: 90%;
+}
+
+.transform-skew {
+	transform: skew(calc(-1 * var(--cnvs-btn-skew)));
+}
+
+.transform-skew > * {
+	display: inline-block;
+	transform: skew(var(--cnvs-btn-skew));
+}
+
+.scroll-text > * {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-repeat: no-repeat;
+	-webkit-text-stroke: 1px;
+}
+
+.divider {
+	--cnvs-divider-border-color: rgba(255,255,255,.2);
+}
+
+.ticker-wrap .ticker-item {
+	font-size: 1.25rem;
+	text-decoration: none;
+}
