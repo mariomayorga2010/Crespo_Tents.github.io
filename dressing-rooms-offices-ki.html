@@ -66,6 +66,61 @@
         .pet-search input::-webkit-input-placeholder {
             color: #BBB;
         }
+
+        .image-4by3 {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;
+            /* Mantener la proporción de 4:3 */
+            object-fit: cover;
+            /* Ajusta la imagen para que llene el contenedor */
+        }
+
+        #header {
+            background-color: #2f2e2e;
+            /* Cambia el fondo del menú a negro */
+            color: #2f2e2e;
+            /* Cambia el color del texto a blanco (opcional, para mejor visibilidad) */
+        }
+
+        .primary-menu {
+            display: flex;
+            justify-content: center;
+        }
+
+        .slider-inner {
+            background-image: url('images/dress.png');
+            /* Ruta de tu imagen */
+            background-size: cover;
+            /* Asegura que la imagen cubra todo el div */
+            background-position: center;
+            /* Centra la imagen */
+            background-repeat: no-repeat;
+            /* Evita que la imagen se repita */
+
+        }
+
+        .slider-caption {
+            color: white;
+            /* Color blanco para el texto */
+            text-align: center;
+            /* Centra el texto */
+            background-color: white;
+            /* Fondo semitransparente para mejorar legibilidad */
+            padding: 10px;
+            border-radius: 10px;
+            transform: translateY(0px);
+            /* Desplaza el texto hacia abajo un 50% */
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
     </style>
 
 </head>
@@ -100,7 +155,7 @@
 
                         <!-- Primary Navigation
 						============================================= -->
-                       <nav class="primary-menu">
+                        <nav class="primary-menu">
 
                             <ul class="one-page-menu menu-container" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
                                 <li class="menu-item">
@@ -117,86 +172,96 @@
             </div>
             <div class="header-wrap-clone"></div>
         </header><!-- #header end -->
-
-
-        
-        
-        
-		<section id="content"  style="background-color: #dad5d4;">
-			<div class="content-wrap">
-				<div class="container">
-
-					<div class="row gx-5 col-mb-80">
-						<!-- Post Content
-						============================================= -->
-						<main class="postcontent col-lg-9">
-
-							<div class="single-post mb-0">
-
-								<!-- Single Post
-								============================================= -->
-								<div class="entry">
-
-									<!-- Entry Title
-									============================================= -->
-									<div class="entry-title">
-										<h2>
-WEDDINGS</h2>
-									</div><!-- .entry-title end -->
-
-									<!-- Entry Meta
-									============================================= -->
-								
-
-									
-
-									<!-- Entry Content
-									============================================= -->
-									<div class="entry-content mt-0">
-
-
-										<p>Luxury premium tents offer an exquisite solution for hosting diverse weddings in Los Cabos, accommodating a range of cultural traditions with elegance and comfort. Whether for vibrant Indian celebrations, sophisticated Asian ceremonies, or traditional Jewish nuptials, these high-end tents provide a customizable and opulent setting that can be tailored to any theme or style. Their spacious interiors and elegant designs ensure that every detail, from intricate decor to grand receptions, is executed flawlessly. With features like climate control, sophisticated lighting, and plush furnishings, luxury tents create a luxurious and unforgettable backdrop for weddings, blending seamlessly with the picturesque beauty of Los Cabos.</p>
-
-
-							</div>
-                                    <!-- Entry Image
-									============================================= -->
-									<div class="entry-image">
-										<a href="#"><img src="images/wedding1.PNG" alt="Blog Single"></a>
-                                        <br>
-                                        <a href="#"><img src="images/wedding2.PNG" alt="Blog Single"></a>
-                                        <br>
-                                        <a href="#"><img src="images/wedding3.PNG" alt="Blog Single"></a>
-                                        <br>
-                                        <a href="#"><img src="images/wedding4.PNG" alt="Blog Single"></a>
-                                        <br>
+        <section id="slider" class="slider-element swiper_wrapper min-vh-60 min-vh-md-400" style="background-color: #dad5d4;">
+            <div class="slider-inner">
+                <div class="swiper swiper-parent">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide dark">
+                            <div class="container">
+                                <div class="slider-caption slider-caption-center" style="margin-top: 450px">
+                                    <h3 style="color:   #424242" data-animate="fadeInUp">
                                         
-                                       
-									</div><!-- .entry-image end -->
-</div>
+EXPO STANDS WITH TENTS</h3>
+                                    <p style="color: #424242; font-size: 22px;" data-animate="fadeInUp" data-delay="200">
+                                        Make your brand stand out with our special equipment for expos.
+                                    </p>
                                 </div>
-                            
-		</section><!-- #content end -->
-        
-        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Footer
+        <!-- Content
 		============================================= -->
+        <section id="content">
+            <div class="content-wrap">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                        </div>
+
+                        <div class="col-md-6">
+                            <br>
+                        </div>
+                    </div>
+                    <hr style="border: 1px solid #000; width: 100%;">
+
+                    <br>
+                    <br>
+
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 style="color:   #424242">
+FOLDABLE CHAIRS</h3>
+
+                            <p style="color: #424242; font-size: 14px;" data-animate="fadeInUp" data-delay="200">
+                                Practical and reliable.
+                            </p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h3 style="color:   #424242">
+
+CIAN CHAIR</h3>
+
+                            <p style="color: #424242; font-size: 14px;" data-animate="fadeInUp" data-delay="200">
+                               Add luxury to your stand.
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                         
+                    
+                    <br><br>
+                    <br>
+                </div>
+            </div>
+        </section> <!-- #content end -->
+
         <footer id="footer" class="dark border-0">
-<div class="d-flex justify-content-center mt-4" style="margin-bottom: 3%;">
-            <a href="https://www.facebook.com/crespotents" class="social-icon si-small bg-transparent h-bg-facebook" title="Facebook" style="font-size: 1.3em; width: 1.3em; height: 1.3em;">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/crespotents/" class="social-icon si-small bg-transparent h-bg-x-twitter" title="Twitter" style="font-size: 1.3em; width: 1.3em; height: 1.3em;">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-        </div>
-  
+            <div class="d-flex justify-content-center mt-4" style="margin-bottom: 3%;">
+                <a href="https://www.facebook.com/crespotents" class="social-icon si-small bg-transparent h-bg-facebook" title="Facebook" style="font-size: 1.3em; width: 1.3em; height: 1.3em;">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/crespotents/" class="social-icon si-small bg-transparent h-bg-x-twitter" title="Twitter" style="font-size: 1.3em; width: 1.3em; height: 1.3em;">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
             <div id="copyrights">
                 <div class="container text-center">
-                    
+
                 </div>
             </div>
 
