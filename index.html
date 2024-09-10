@@ -75,6 +75,29 @@
             object-fit: cover;
             /* Ajusta la imagen para que llene el contenedor */
         }
+
+        .floating-tab {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            left: :10px;
+            padding: 10px;
+            width: 230px;
+            height: 40px;
+            background-color: #dad5d4;
+            color: gray;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .floating-tab:hover {
+            background-color: grey;
+        }
     </style>
 
 </head>
@@ -442,14 +465,14 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6 mt-3 mt-lg-0">
-                                        <span class="before-heading fst-normal">
+                                        <span class="">
                                             Everything you need in an office, concert or film production.
                                         </span>
                                         <div class="entry-title text-transform-none">
                                             <h3 class="fw-normal"><a href="services-3.html">Dressing Rooms, Mobile Offices & Mobile Kitchens</a></h3>
                                         </div>
                                         <div class="entry-content" style="background-color: #ae383a; padding: 10px; border-radius: 5px; width: 140px; height: 50px;">
-                                            <a href="services-3.html" class="more-link" style="color: white;">Learn More <i class="uil uil-angle-right-b"></i></a>
+                                            <a href="services-3.html" class="" style="color: white;">Learn More <i class="uil uil-angle-right-b"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -464,12 +487,12 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6 mt-3 mt-lg-0">
-                                        <span class="before-heading fst-normal">Do your best selling with our full equipped expo tents.</span>
+                                        <span class="">Do your best selling with our full equipped expo tents.</span>
                                         <div class="entry-title text-transform-none">
                                             <h3 class="fw-normal"><a href="dressing-rooms-offices-ki.html">Expo Stands With Tents</a></h3>
                                         </div>
                                         <div class="entry-content" style="background-color: #ae383a; padding: 10px; border-radius: 5px; width: 140px; height: 50px;">
-                                            <a href="dressing-rooms-offices-ki.html" class="more-link" style="color: white;">Learn More <i class="uil uil-angle-right-b"></i></a>
+                                            <a href="dressing-rooms-offices-ki.html" class="" style="color: white;">Learn More <i class="uil uil-angle-right-b"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -483,13 +506,13 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6 mt-3 mt-lg-0">
-                                        <span class="before-heading fst-normal">
+                                        <span class="">
                                             Variety of tables, chairs an decor elements</span>
                                         <div class="entry-title text-transform-none">
                                             <h3 class="fw-normal"><a href="expo-stands-1.html">Furniture</a></h3>
                                         </div>
                                         <div class="entry-content" style="background-color: #ae383a; padding: 10px; border-radius: 5px; width: 140px; height: 50px;">
-                                            <a href="expo-stands-1.html" class="more-link" style="color: white;">Learn More <i class="uil uil-angle-right-b"></i></a>
+                                            <a href="expo-stands-1.html" class="" style="color: white;">Learn More <i class="uil uil-angle-right-b"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -503,13 +526,13 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6 mt-3 mt-lg-0">
-                                        <span class="before-heading fst-normal">
+                                        <span class="">
                                             Give an exotic touch to your events</span>
                                         <div class="entry-title text-transform-none">
                                             <h3 class="fw-normal"><a href="expo-stands2.html">Draping Structures</a></h3>
                                         </div>
                                         <div class="entry-content" style="background-color: #ae383a; padding: 10px; border-radius: 5px; width: 140px; height: 50px;">
-                                            <a href="expo-stands2.html" class="more-link" style="color: white;">Learn More <i class="uil uil-angle-right-b"></i></a>
+                                            <a href="expo-stands2.html" class="" style="color: white;">Learn More <i class="uil uil-angle-right-b"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -520,22 +543,22 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="section parallax scroll-detect m-0 dark" style="padding:350px 0;">
-						<img src="images/atardecer.png" class="parallax-bg">
+                <img src="images/atardecer.png" class="parallax-bg">
 
-						<div class="container">
+                <div class="container">
 
-							<div class="row justify-content-end">
-								<div class="col-md-7">
-								
-								</div>
-							</div>
+                    <div class="row justify-content-end">
+                        <div class="col-md-7">
 
-						</div>
+                        </div>
+                    </div>
 
-					</div>
-            
+                </div>
+
+            </div>
+
             <div id="section-contact" class="page-section pt-0">
 
                 <div id="" class="page-section">
@@ -665,8 +688,14 @@
         <!-- #wrapper end -->
         <!-- Go To Top
 	============================================= -->
-        <div id="gotoTop" class="uil uil-angle-up"></div>
-
+        
+        <div col-lg-6 class="floating-tab">
+            <a href="https://wa.me/523222941645" style="display: flex; align-items: center; text-decoration: none; color: #000;">
+                <!-- Ícono de WhatsApp -->
+                <img src="images/whatsapp.png" alt="WhatsApp" style="width: 24px; height: 24px; margin-left: 8px;">
+                Request a quotation
+            </a>
+        </div>
         <!-- JavaScripts
 	============================================= -->
         <script src="js/plugins.min.js"></script>
