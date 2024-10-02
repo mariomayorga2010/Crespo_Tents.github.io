@@ -222,14 +222,14 @@ blockquote {
 	&.scroll-detect {
 		span {
 			opacity: calc(0.1 + (1 * var(--#{$cnvs-prefix}scroll-percent)));
-			transform: rotateX(20deg);
-			transition: all .3s ease;
-			transition-delay: 0s;
+			transform: rotateX(200deg);
+			transition: all 1.3s ease;
+			transition-delay: 1s;
 		}
 
 		&.scroll-detect-inview span {
 			transform: rotateX(0);
-			transition-delay: calc(.04s * var(--#{$cnvs-prefix}split-index));
+			transition-delay: calc(.14s * var(--#{$cnvs-prefix}split-index));
 		}
 	}
 }
